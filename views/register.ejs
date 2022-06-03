@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/journal/bootstrap.min.css"
+    />
+    <title>Register User</title>
+  </head>
+  <body>
+    <div class="container card card-body mt-4">
+      <%- include ('partials/message')%>
+
+      <form action="/users/register" method="post">
+        <h2 class="mb-2 text-center">Register</h2>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="name"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="example@mail.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password2"
+            id="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+      <p class="mt-4">Already have an account? <a href="/login">Login</a></p>
+    </div>
+  </body>
+</html>
